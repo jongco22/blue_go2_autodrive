@@ -51,6 +51,7 @@ def generate_launch_description():
             executable='go2_sport_client',
             name='go2_cmdvel_bridge',
             arguments=[LaunchConfiguration('go2_mode')],
+            # 상태 토픽 이름이 다르면 리맵하세요 (예: 실제가 /sportmodestate 인 경우)
             remappings=[('lf/sportmodestate', '/sportmodestate')],
             output='screen'
         ),
